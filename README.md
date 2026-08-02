@@ -212,4 +212,4 @@ Raw `MotionValue`s — one per animated property (tilt X/Y, scale, glare X/Y/opa
 
 ## License
 
-MIT — © seaofchaos
+MIT
