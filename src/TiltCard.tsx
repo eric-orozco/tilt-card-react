@@ -413,7 +413,7 @@ function TiltCard({
    * (-1, -1) = top-left corner (max left/top tilt).
    * (+1, +1) = bottom-right corner (max right/bottom tilt).
    */
-  function getNormalisedPosition(e: React.MouseEvent<HTMLDivElement>): {
+  function getNormalisedPosition(e: MouseEvent<HTMLDivElement>): {
     nx: number;
     ny: number;
   } {
@@ -428,7 +428,7 @@ function TiltCard({
    * over the card. Runs at pointer-move frequency (can be very fast) but
    * only sets MotionValues — no React state, so zero re-renders.
    */
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>): void {
+  function handleMouseMove(e: MouseEvent<HTMLDivElement>): void {
     if (prefersReducedMotion) return;
     const { nx, ny } = getNormalisedPosition(e);
 
