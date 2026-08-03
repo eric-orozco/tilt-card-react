@@ -4,7 +4,6 @@
 
 [![npm](https://img.shields.io/badge/npm-%40eao%2Ftilt--card-blue)](https://www.npmjs.com/package/@eao/tilt-card)
 [![CI](https://github.com/eric-orozco/tilt-card-react/actions/workflows/ci.yml/badge.svg)](https://github.com/eric-orozco/tilt-card-react/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/seaofchaos/tilt-card-react/branch/main/graph/badge.svg)](https://codecov.io/gh/seaofchaos/tilt-card-react)
 ![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![motion](https://img.shields.io/badge/motion-12-6B44FF?logo=framer)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
