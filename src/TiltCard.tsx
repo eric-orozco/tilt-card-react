@@ -1,6 +1,12 @@
-'use client';
+"use client";
 
-import { createContext, useContext, useRef, type CSSProperties, type ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useRef,
+  type CSSProperties,
+  type ReactNode,
+} from "react";
 import {
   motion,
   useMotionValue,
@@ -9,7 +15,7 @@ import {
   useTransform,
   type MotionValue,
   type SpringOptions,
-} from 'motion/react';
+} from "motion/react";
 
 // ─── Context ──────────────────────────────────────────────────────────────────
 
@@ -58,8 +64,8 @@ function useTiltContext(): TiltContextValue {
   const ctx = useContext(TiltContext);
   if (!ctx) {
     throw new Error(
-      '<TiltCard.Layer> must be rendered inside a <TiltCard>. ' +
-        'Make sure TiltCard wraps this component in the tree.'
+      "<TiltCard.Layer> must be rendered inside a <TiltCard>. " +
+        "Make sure TiltCard wraps this component in the tree.",
     );
   }
   return ctx;
@@ -244,7 +250,7 @@ function Layer({ children, className, style, depth = 0 }: LayerProps) {
   return (
     <motion.div
       className={className}
-      style={{ ...style, translateX, translateY, willChange: 'transform' }}
+      style={{ ...style, translateX, translateY, willChange: "transform" }}
     >
       {children}
     </motion.div>
@@ -379,9 +385,9 @@ function TiltCard({
     hovered,
     [0, 1],
     [
-      '0 4px 12px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.06)',
-      '0 28px 52px rgba(0, 0, 0, 0.32), 0 8px 16px rgba(0, 0, 0, 0.16)',
-    ]
+      "0 4px 12px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.06)",
+      "0 28px 52px rgba(0, 0, 0, 0.32), 0 8px 16px rgba(0, 0, 0, 0.16)",
+    ],
   );
 
   /**
@@ -392,7 +398,7 @@ function TiltCard({
   const sheenBackground = useTransform(
     [sheenX, sheenY] as MotionValue<number>[],
     ([x, y]: number[]) =>
-      `radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,${glareOpacity}) 0%, transparent 65%)`
+      `radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,${glareOpacity}) 0%, transparent 65%)`,
   );
 
   // ── Y-axis lift — the card rises upward on hover ──────────────────────────
@@ -503,7 +509,7 @@ function TiltCard({
        * `display: contents` would strip the box (removing perspective), so
        * we leave it as a default block and let the inner card size itself.
        */}
-      <div style={{ perspective: '1000px', height: '100%' }}>
+      <div style={{ perspective: "1000px", height: "100%" }}>
         <motion.div
           ref={cardRef}
           className={className}
@@ -516,10 +522,10 @@ function TiltCard({
             boxShadow,
             // preserve-3d lets child layers with translateZ actually stack
             // in 3D space — required for TiltCard.Layer parallax to look right.
-            transformStyle: 'preserve-3d',
+            transformStyle: "preserve-3d",
             // Hint to the browser to keep this element on the GPU compositor.
-            willChange: 'transform',
-            position: 'relative',
+            willChange: "transform",
+            position: "relative",
           }}
           onMouseMove={handleMouseMove}
           onMouseEnter={handleMouseEnter}
@@ -544,12 +550,12 @@ function TiltCard({
           <motion.div
             aria-hidden="true"
             style={{
-              position: 'absolute',
+              position: "absolute",
               inset: 0,
-              borderRadius: 'inherit',
+              borderRadius: "inherit",
               background: sheenBackground,
               opacity: sheenOpacity,
-              pointerEvents: 'none',
+              pointerEvents: "none",
               zIndex: 9999,
             }}
           />
