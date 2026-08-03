@@ -30,9 +30,6 @@ importers:
       '@storybook/addon-interactions':
         specifier: ^8.6.0
         version: 8.6.14(storybook@8.6.18)
-      '@storybook/blocks':
-        specifier: ^8.6.0
-        version: 8.6.14(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@8.6.18)
       '@storybook/react':
         specifier: ^8.6.0
         version: 8.6.18(@storybook/test@8.6.15(storybook@8.6.18))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@8.6.18)(typescript@5.9.3)
